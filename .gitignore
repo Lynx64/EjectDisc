@@ -1,4 +1,5 @@
 build/
+/wiiu/
 *.elf
 *.rpx
 *.wuhb
