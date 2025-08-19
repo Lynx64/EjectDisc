@@ -1,3 +1,4 @@
+#include "main.h"
 #include "logger.h"
 #include "ShaderSerializer.h"
 
@@ -186,6 +187,7 @@ int32_t main() {
     ProcUIInit(procUiSaveCallback);
 
     initLogging();
+    DEBUG_FUNCTION_LINE_INFO("Running version " VERSION);
 
     bool quitting = false;
     const int32_t driveState = getDriveState();
