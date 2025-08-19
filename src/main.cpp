@@ -191,8 +191,14 @@ int32_t main() {
     const int32_t driveState = getDriveState();
     DEBUG_FUNCTION_LINE("Drive state: %d", driveState);
 
-    Mocha_InitLibrary();
-    giveEjectRequestPpcPermissions();
+    auto mochaInitRes = Mocha_InitLibrary();
+    if (mochaInitRes != MOCHA_RESULT_SUCCESS) {
+        DEBUG_FUNCTION_LINE_ERR("Failed to init libmocha: %s (%d)",
+                                Mocha_GetStatusStr(mochaInitRes),
+                                mochaInitRes);
+    } else {
+        giveEjectRequestPpcPermissions();
+    }
     uint32_t request = 1;
     bspWrite("SMC", 0, "EjectRequest", 4, &request);
 
