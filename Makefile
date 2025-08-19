@@ -47,7 +47,7 @@ INCLUDES	:=  src
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
-CFLAGS	:=  -O2 -Wall -Wextra -ffunction-sections $(MACHDEP)
+CFLAGS	:=  -O2 -Wall -Wextra -Wno-unused-parameter -ffunction-sections $(MACHDEP)
 
 CFLAGS	+=	$(INCLUDE) -D__WIIU__ -D__WUT__
 
