@@ -42,7 +42,7 @@ BUILD		:=	build
 SOURCES		:=	src
 DATA		:=	data
 INCLUDES	:=  src
-#ICON		:=  meta/menu-icon.png
+ICON		:=  meta/menu-icon.png
 
 #---------------------------------------------------------------------------------
 # options for code generation
